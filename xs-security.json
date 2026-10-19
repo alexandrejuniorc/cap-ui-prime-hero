@@ -1,19 +1,20 @@
 {
+  "xsappname": "cap-ui",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
   "scopes": [
     {
-      "name": "$XSAPPNAME.admin",
-      "description": "admin"
+      "name": "uaa.user",
+      "description": "UAA"
     }
   ],
-  "attributes": [],
   "role-templates": [
     {
-      "name": "admin",
-      "description": "generated",
+      "name": "Token_Exchange",
+      "description": "UAA",
       "scope-references": [
-        "$XSAPPNAME.admin"
-      ],
-      "attribute-references": []
+        "uaa.user"
+      ]
     }
   ]
 }
